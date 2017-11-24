@@ -1,0 +1,36 @@
+#include <iostream.h>
+#include <math.h>
+//declaración de la función
+double CalculaDerivada(double *coefientes, int grade, double pto);
+void main ()
+{
+int grado;
+double x, derivada;
+ //introducción del grado del polinomio
+ cout << "Introduzca el grado del polinomio: ";
+cin >> grado;
+
+double *coefs=new double[grado+1]; //asignación dinámica de memoria
+ //introducción de los coeficientes
+for (int i=0;i<=grado;i++)
+ {
+ cout << "Coeficiente para X^" << grado-i << " : " << endl;
+ cin >> coefs[i];
+ }
+ //introducción del punto de evaluación
+ cout << "Introduzca el punto para evaluar la derivada: " << endl;
+ cin >> x;
+ //llamada a la función CalculaDerivada()
+ derivada = CalculaDerivada(coefs, grado, x);
+
+ //saca el resultado por consola
+ cout << "El valor de la derivada es : " << derivada << endl;
+delete [] coefs;
+}
+//definición de la función CalculaDerivada()
+double CalculaDerivada(double *coeficientes, int grade, double pto)
+{
+double resultado=0;
+ //cálculo de la derivada. Implementar el algoritmo
+return resultado;
+}
